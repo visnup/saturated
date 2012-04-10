@@ -7,7 +7,7 @@ var Canvas = require('canvas')
   , d = 10
 
 /*
- * http://saturated.jitsu.com/?url=http%3A%2F%2Fsphotos.xx.fbcdn.net%2Fhphotos-ash3%2Fs720x720%2F529205_413720861989482_125086767519561_1556562_910734765_n.jpg
+ * http://saturated.jit.su/?url=http%3A%2F%2Fsphotos.xx.fbcdn.net%2Fhphotos-ash3%2Fs720x720%2F529205_413720861989482_125086767519561_1556562_910734765_n.jpg
  * => {"h":25.26315789473684,"s":12.418300653594772,"l":30.000000000000004,"a":1}
  */
 http.createServer(function(req, res) {
@@ -38,6 +38,6 @@ http.createServer(function(req, res) {
       res.end(JSON.stringify(hsla))
     })
   } else {
-    res.end("Try http://saturated.jitsu.com/?url=http%3A%2F%2Fsphotos.xx.fbcdn.net%2Fhphotos-ash3%2Fs720x720%2F529205_413720861989482_125086767519561_1556562_910734765_n.jpg")
+    res.end("Try http://saturated.jit.su/?url=http%3A%2F%2Fsphotos.xx.fbcdn.net%2Fhphotos-ash3%2Fs720x720%2F529205_413720861989482_125086767519561_1556562_910734765_n.jpg")
   }
 }).listen(process.env.PORT || 8002)
