@@ -36,6 +36,6 @@ http.createServer(function(req, res) {
     })
   } else {
     res.writeHead(200, {'Content-Type': 'text/html'})
-    res.end('<form><input name="url" placeholder="image url" autofocus/><input type="submit"/></form>')
+    res.end('<style>body,input,*[type="submit"]{font:18pt monospace;text-align:center;}</style><form><input name="url" placeholder="image url" autofocus/><input type="submit"/></form><a href="https://github.com/visnup/saturated/blob/master/server.js">le code</a>')
   }
 }).listen(process.env.PORT || 8000)
