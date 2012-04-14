@@ -4,6 +4,7 @@ var Canvas = require('canvas')
   , stylus = require('stylus')
   , HSLA = stylus.nodes.HSLA
   , url = require('url')
+  , util = require('util')
   , d = 10
 
 http.createServer(function(req, res) {
@@ -30,7 +31,9 @@ http.createServer(function(req, res) {
       }
 
       delete saturated.hsla
+      saturated._preview = util.format('http://www.colorhexa.com/color.php?c=h%20%d%20s%20%d%20l%20%d', saturated.h.toFixed(), saturated.s.toFixed(), saturated.l.toFixed())
       console.log(u, saturated)
+
       res.writeHead(200, {'Content-Type': 'application/json'})
       res.end(JSON.stringify(saturated))
     })
