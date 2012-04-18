@@ -26,7 +26,7 @@ http.createServer(function(req, res) {
         , hsla
       for (var i = 0; i < p.length; i += 4) {
         hsla = HSLA.fromRGBA({ r: p[i], g: p[i+1], b: p[i+2], a: p[i+3] })
-        if (hsla.s > saturated.s && 25 < hsla.l && hsla.l < 50)
+        if (hsla.s > saturated.s && 25 < hsla.l && hsla.l < 60)
           saturated = hsla
       }
 
